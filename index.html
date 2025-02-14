@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Операційна система Android</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Хедер -->
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="Логотип Android" class="logo">
+            <h1>Операційна система Android</h1>
+        </div>
+    </header>
+
+    <!-- Контейнер -->
+    <div class="container">
+
+        <section>
+            <h2>Що таке Android?</h2>
+            <p>
+                <strong>Android</strong> — це найпопулярніша у світі мобільна операційна система, розроблена компанією <strong>Google</strong>. 
+                Вона працює на мільйонах пристроїв, включаючи смартфони, планшети, телевізори, автомобілі та навіть розумні годинники.
+            </p>
+        </section>
+
+        <section>
+            <h2>Історія Android</h2>
+            <p>
+                У 2005 році <strong>Google</strong> купила Android Inc., і вже у 2008 році був представлений перший смартфон на базі Android — 
+                <strong>T-Mobile G1 (HTC Dream)</strong>. З того часу система постійно розвивається та вдосконалюється.
+            </p>
+        </section>
+
+        <section>
+            <h2>Основні версії Android</h2>
+            <ul>
+                <li><strong>Android 1.0 (2008)</strong> – перший реліз.</li>
+                <li><strong>Android 4.4 KitKat (2013)</strong> – покращена продуктивність.</li>
+                <li><strong>Android 12 (2021)</strong> – персоналізація та підвищена конфіденційність.</li>
+                <li><strong>Android 14 (2023)</strong> – покращена безпека та адаптивність.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Популярні Android-смартфони 2025 року</h2>
+            <div class="smartphones">
+                <div class="phone">
+                    <img src="samsung.png" alt="Samsung" class="phone-logo">
+                    <h3>Samsung Galaxy S25 Ultra</h3>
+                    <button onclick="openPhoneInfo('samsung')">Детальніше</button>
+                </div>
+
+                <div class="phone">
+                    <img src="pixel2.png" alt="Google Pixel" class="phone-logo">
+                    <h3>Google Pixel 9 Pro</h3>
+                    <button onclick="openPhoneInfo('pixel')">Детальніше</button>
+                </div>
+
+                <div class="phone">
+                    <img src="Xiaomi.png" alt="Xiaomi" class="phone-logo">
+                    <h3>Xiaomi 15 Ultra</h3>
+                    <button onclick="openPhoneInfo('xiaomi')">Детальніше</button>
+                </div>
+
+                <div class="phone">
+                    <img src="One.png" alt="OnePlus" class="phone-logo">
+                    <h3>OnePlus 12 Pro</h3>
+                    <button onclick="openPhoneInfo('oneplus')">Детальніше</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Де ми знаходимось?</h2>
+            <p>Адреса: вул. Прикладна, 123, Київ, Україна</p>
+            <button onclick="openMap()">Відкрити карту</button>
+        </section>
+
+    </div>
+
+    <!-- Футер -->
+    <footer>
+        <p>&copy; 2025 Всі права захищено</p>
+    </footer>
+
+    <!-- Скрипти -->
+    <script>
+        function openPhoneInfo(phone) {
+            let phoneInfo = {
+                samsung: "<h2>Samsung Galaxy S25 Ultra</h2><p>Новий флагман із найпотужнішим процесором Exynos 2500, камерою 200 МП та батареєю на 6000 мАг.</p>",
+                pixel: "<h2>Google Pixel 9 Pro</h2><p>Оновлена версія Pixel з інноваційними AI-функціями та камерою, що знімає в 8K.</p>",
+                xiaomi: "<h2>Xiaomi 15 Ultra</h2><p>Смартфон із унікальним дизайном та найновішим процесором Snapdragon 8 Gen 4.</p>",
+                oneplus: "<h2>OnePlus 12 Pro</h2><p>Поєднання потужності, швидкої зарядки 150W та OxygenOS для максимальної продуктивності.</p>"
+            };
+
+            let newWindow = window.open("", "_blank", "width=500,height=400");
+            newWindow.document.write("<html><head><title>Інформація про смартфон</title></head><body>");
+            newWindow.document.write(phoneInfo[phone]);
+            newWindow.document.write("</body></html>");
+        }
+
+        function openMap() {
+            window.open("https://www.google.com/maps?q=Київ, Україна", "_blank");
+        }
+    </script>
+
+</body>
+</html>
